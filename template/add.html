@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Add Phone Number{% endblock %}
+
+{% block content %}
+
+<h1>Add Phone Number</h1>
+    
+<form action="" method='post'>
+    {{ form.csrf_token }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.first_name.label }}
+            {{ form.first_name(class='form-control', placeholder='First Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.last_name.label }}
+            {{ form.last_name(class='form-control', placeholder='Last Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.phone_number.label }}
+            {{ form.phone_number(class='form-control', placeholder='Phone Number') }}
+        </fieldset>
+        <fieldset>
+            {{ form.address.label }}
+            {{ form.address(class='form-control', placeholder='Address') }}
+        </fieldset>
+    </div>
+    {{ form.submit(class='btn btn-outline-success') }}
+</form>
+{% endblock %}
